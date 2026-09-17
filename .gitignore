@@ -1,14 +1,13 @@
-# OS files
+# OS Файли
 Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Editor files
+# Файли IDE
 .vscode/
-.idea/
-*.swp
-*.swo
-*~
+
+# Залежн.Node.JS
+node_modules/
 
 # Logs
 *.log
