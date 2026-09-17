@@ -19,6 +19,7 @@
 web-course/
 ├── index.html      # Головна сторінка
 ├── about.html      # Сторінка відомостей про автора
+├── favicon.ico     # Іконка сайту
 ├── _config.yml     # Конфігурація для GitHub Pages
 ├── .gitignore      # Файл ігнорування git
 └── README.md       # Опис репозиторію
