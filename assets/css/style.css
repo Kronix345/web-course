@@ -20,6 +20,15 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+.site-nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--bg-soft);
+}
+.site-nav a { color: var(--ink); font-weight: 500; }
+
 h1 { font-size: 2.6rem; line-height: 1.2; margin: 48px 0 12px; }
 h2 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 12px; }
 p { margin: 0 0 12px; }
