@@ -17,9 +17,12 @@
 
 ```
 web-course/
-├── index.html      # Головна сторінка
-├── about.html      # Сторінка відомостей про автора
-├── favicon.ico     # Іконка сайту
-├── .gitignore      # Файл ігнорування git
-└── README.md       # Опис репозиторію
+├── index.html                # Головна сторінка
+├── about.html                # Сторінка відомостей про автора
+├── favicon.ico               # Іконка сайту
+├── .gitignore                # Файл ігнорування git
+├── README.md                 # Опис репозиторію
+└── assets/
+    └── css/
+        └── style.css         # Стилі сайту
 ```
