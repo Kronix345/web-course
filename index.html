@@ -1,33 +1,527 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Лаба №1 з веб-програмування">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Синюк Антон - Веб-програмування</title>
+    <meta name="description" content="LoginBox - ready-made sign-in form that developers add to their apps.">
+    <title>LoginBox - Sign-in forms for your app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="site-nav">
-        <a href="index.html">Головна</a>
-        <a href="about.html">Про мене</a>
-        <a href="contacts.html">Контакти</a>
-    </nav>
-    <h1>Синюк Антон - КІІ-61</h1>
-    <p>Здобувач першого курсу за спеціальністю "Інженерія програмного забезпечення", Факультет Кібернетики</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <span class="header-logo">LoginBox</span>
+            </div>
+            <div class="header-center">
+                <svg class="header-diamond" width="31" height="31" viewBox="0 0 31 31" aria-label="LoginBox symbol">
+                    <polygon points="15.5,3 27,9 27,22 15.5,28 4,22 4,9" fill="none" stroke="#D1E4FA" stroke-width="1.5"/>
+                    <polygon points="15.5,10 21,13 21,18 15.5,21 10,18 10,13" fill="#D1E4FA"/>
+                </svg>
+            </div>
+            <div class="header-right">
+                <a class="pill-link pill-github" href="https://github.com/">View on GitHub</a>
+            </div>
+        </div>
+    </header>
 
-    <h2>Розробка сайту з хостингу віддалених серверів</h2>
-    <p>
-        Мета лабораторної роботи: ознайомитися з основами веб-програмування та створити простий веб-сайт.
-        Протягом семестру розробляється веб-сайт, призначений для оренди/продажу віддалених хостингів та серверів.
-    </p>
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="features">
+            <div class="hero-bg">
+                <div class="hero-lines-vert"></div>
+                <div class="hero-lines-horiz"></div>
+                <div class="hero-glow-top"></div>
+                <div class="hero-stars"></div>
+            </div>
+            <div class="hero-content">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Introducing</span>
+                        <span class="label-line"></span>
+                        <svg class="label-cross" width="40" height="40" viewBox="0 0 40 40" aria-label="decorative cross">
+                            <line x1="20" y1="5" x2="20" y2="35" stroke="rgba(186,215,247,0.3)" stroke-width="1"/>
+                            <line x1="5" y1="20" x2="35" y2="20" stroke="rgba(186,215,247,0.3)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h1 class="hero-h1">The best sign-in box<br>for your website.</h1>
+                </div>
 
-    <h2>Перелік технологій що використовуються/вивчаються</h2>
-    <ul>
-        <li>HTML5 - мова розмітки та структурування вмісту</li>
-        <li>CSS3 - оформлення та адаптивна верстка</li>
-        <li>JavaScript - інтерактивність та взаємодія з користувачем</li>
-    </ul>
+                <div class="hero-cards-wrap">
+                    <!-- Left card -->
+                    <article class="card sign-card sign-card-left">
+                        <div class="sign-icon" aria-label="Login icon">🔐</div>
+                        <h3 class="sign-title">Welcome back</h3>
+                        <p class="sign-sub muted">Log in to continue.</p>
+                        <div class="form-block">
+                            <label class="field-label" for="email-left">Email</label>
+                            <input class="input input-sm" id="email-left" type="email" placeholder="Your email address">
+                            <button class="btn-outline" type="button">Continue</button>
+                            <p class="form-link">Don't have an account? Sign up</p>
+                        </div>
+                    </article>
+
+                    <!-- Middle card -->
+                    <article class="card sign-card sign-card-middle">
+                        <div class="sign-icon-lg" aria-label="App icon">📱</div>
+                        <h3 class="sign-title-lg">Sign in to your app</h3>
+                        <div class="form-block">
+                            <label class="field-label" for="email-mid">Email</label>
+                            <input class="input input-pill" id="email-mid" type="email" placeholder="Your email address">
+                            <button class="btn-pill-outline" type="button">Continue</button>
+                        </div>
+                        <div class="divider">
+                            <span class="divider-line"></span>
+                            <span class="divider-text">OR</span>
+                            <span class="divider-line"></span>
+                        </div>
+                        <div class="social-col">
+                            <button class="btn-pill-outline" type="button">
+                                <span class="social-dot">●</span> Continue with Google
+                            </button>
+                            <button class="btn-pill-outline" type="button">
+                                <span class="social-dot">●</span> Continue with Microsoft
+                            </button>
+                        </div>
+                        <p class="form-link">Don't have an account? Sign up</p>
+                    </article>
+
+                    <!-- Right card -->
+                    <article class="card sign-card sign-card-right">
+                        <div class="sign-icon" aria-label="Verify icon">✅</div>
+                        <h3 class="sign-title">Verify it's you</h3>
+                        <p class="sign-sub muted">Enter the one-time code from your authenticator app.</p>
+                        <div class="form-block">
+                            <label class="field-label" for="code1">One-time code</label>
+                            <div class="code-row">
+                                <input class="code-box" id="code1" maxlength="1">
+                                <input class="code-box" id="code2" maxlength="1">
+                                <input class="code-box" id="code3" maxlength="1">
+                                <input class="code-box" id="code4" maxlength="1">
+                                <input class="code-box" id="code5" maxlength="1">
+                                <input class="code-box" id="code6" maxlength="1">
+                            </div>
+                            <button class="btn-outline" type="button">Continue</button>
+                            <a class="link-grad" href="#">Back to sign in</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="theme-toggle">
+                    <div class="toggle-track">
+                        <span class="toggle-thumb">🌙</span>
+                        <span class="toggle-icon-sun">☀️</span>
+                    </div>
+                    <p class="theme-caption">Light and dark modes available.</p>
+                </div>
+
+                <div class="icon-row">
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/MagicAuth.png" alt="Magic link icon">
+                        </div>
+                        <p class="icon-caption">Magic link</p>
+                    </article>
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/Password.png" alt="Password icon">
+                        </div>
+                        <p class="icon-caption">Password</p>
+                    </article>
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/MultiFactAuth.png" alt="Two-step verification icon">
+                        </div>
+                        <p class="icon-caption">Two-step verification</p>
+                    </article>
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/SocialLogin.png" alt="Social login icon">
+                        </div>
+                        <p class="icon-caption">Social login</p>
+                    </article>
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/Biometrics.png" alt="Biometrics icon">
+                        </div>
+                        <p class="icon-caption">Biometrics</p>
+                    </article>
+                    <article class="icon-item">
+                        <div class="icon-circle">
+                            <div class="icon-glow"></div>
+                            <img class="icon-img" src="images/SingleSignOn.png" alt="Single sign-on icon">
+                        </div>
+                        <p class="icon-caption">Single sign-on</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="section-block">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner wide">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Flexible</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Your users. Your data.</h2>
+                    <p class="section-desc"><strong>Maximum flexibility.</strong> Auth fits your app, so you stay in control of your users and their data.</p>
+                </div>
+                <div class="dashboard-wrap">
+                    <div class="dashboard-frame">
+                        <div class="dash-tile tile-green">
+                            <p class="dash-title">Users</p>
+                            <div class="bars">
+                                <span class="bar" style="height: 18px;"></span>
+                                <span class="bar" style="height: 28px;"></span>
+                                <span class="bar" style="height: 14px;"></span>
+                            </div>
+                        </div>
+                        <div class="dash-tile tile-pink">
+                            <p class="dash-title">Sign-ins</p>
+                            <div class="bars">
+                                <span class="bar" style="height: 24px;"></span>
+                                <span class="bar" style="height: 16px;"></span>
+                                <span class="bar" style="height: 30px;"></span>
+                            </div>
+                        </div>
+                        <div class="dash-tile tile-blue">
+                            <p class="dash-title">Errors</p>
+                            <div class="bars">
+                                <span class="bar" style="height: 12px;"></span>
+                                <span class="bar" style="height: 20px;"></span>
+                                <span class="bar" style="height: 10px;"></span>
+                            </div>
+                        </div>
+                        <div class="dash-tile tile-purple">
+                            <p class="dash-title">Sessions</p>
+                            <div class="bars">
+                                <span class="bar" style="height: 26px;"></span>
+                                <span class="bar" style="height: 22px;"></span>
+                                <span class="bar" style="height: 28px;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="section-block">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner wide">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Customizable</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Your brand. Your way.</h2>
+                    <p class="section-desc">Make every part of the sign-in experience feel like your own.</p>
+                </div>
+                <div class="browser-wrap">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="browser-body">
+                            <div class="browser-center">
+                                <div class="browser-card">
+                                    <div class="browser-logo-box">LB</div>
+                                    <p class="browser-title">Sign in to your app</p>
+                                    <label class="field-label" for="b-email">Email</label>
+                                    <input class="input input-sm" id="b-email" type="email">
+                                    <label class="field-label" for="b-pass">Password</label>
+                                    <input class="input input-sm" id="b-pass" type="password">
+                                    <button class="btn-purple" type="button">Continue</button>
+                                    <div class="divider">
+                                        <span class="divider-line"></span>
+                                        <span class="divider-text">OR</span>
+                                        <span class="divider-line"></span>
+                                    </div>
+                                    <button class="btn-outline" type="button">Continue with Google</button>
+                                    <p class="form-link">Don't have an account? Sign up</p>
+                                </div>
+                            </div>
+                            <div class="float-panel panel-color">
+                                <p class="panel-title">Color</p>
+                                <div class="color-row">
+                                    <span class="color-sq sq-red"></span>
+                                    <span class="color-sq sq-purple sel"></span>
+                                    <span class="color-sq sq-blue"></span>
+                                    <span class="color-sq sq-teal"></span>
+                                </div>
+                            </div>
+                            <div class="float-panel panel-logo">
+                                <p class="panel-title">Logo icon</p>
+                                <div class="logo-btn-row">
+                                    <span class="logo-btn selected">◆</span>
+                                    <span class="logo-btn">◈</span>
+                                </div>
+                                <div class="logo-btn-row">
+                                    <span class="logo-btn">▣</span>
+                                    <span class="logo-btn">⬢</span>
+                                </div>
+                            </div>
+                            <div class="float-panel panel-radius">
+                                <p class="panel-title">Radius</p>
+                                <div class="radius-row">
+                                    <span class="r-shape sq"></span>
+                                    <span class="r-shape sm"></span>
+                                    <span class="r-shape md"></span>
+                                    <span class="r-shape full"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="section-block full">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Framework freedom</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Built on Radix, the most popular<br>open source design system.</h2>
+                    <p class="section-desc">AuthKit is built with the same UI components used by Vercel,Linear,Supabase, and thousans of others.</p>
+                </div>
+                <div class="comp-illustration">
+                    <div class="radix-scene" aria-label="Code and interface components">
+                        <pre class="radix-code code-left"><code><span>const</span> signIn = <span>async</span> () =&gt; {
+  <span>await</span> auth.email({
+    email,
+    password
+  })
+}</code></pre>
+                        <div class="radix-orbit" aria-hidden="true">
+                            <span class="orbit-sphere sphere-one"></span>
+                            <span class="orbit-sphere sphere-two"></span>
+                            <span class="orbit-sphere sphere-three"></span>
+                            <span class="radix-mark">◆</span>
+                        </div>
+                        <pre class="radix-code code-right"><code><span>import</span> { Auth } <span>from</span>
+  <span>"@radix/login"</span>
+
+&lt;Auth.Provider&gt;
+  &lt;SignIn /&gt;
+&lt;/Auth.Provider&gt;</code></pre>
+                        <div class="radix-snippet"><span class="snippet-dot"></span> Your auth, your way</div>
+                    </div>
+                </div>
+            </div>
+            <div class="comp-overlay">
+                <a class="pill-link pill-wide" href="#">Learn more</a>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="section-block" id="security">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Protection</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>Designed for developers.<br>Built for the enterprise.</h2>
+                    <p class="section-desc">Auth that meets modern security standards, without adding complexity to your stack.</p>
+                </div>
+                <div class="sec-grid">
+                    <div class="sec-row">
+                        <article class="sec-card">
+                            <div class="sec-ill">
+                                <div class="ill-line"></div>
+                                <div class="ill-blur"></div>
+                            </div>
+                            <p class="sec-title">Leaked password check</p>
+                        </article>
+                        <article class="sec-card">
+                            <div class="sec-ill">
+                                <div class="finger"></div>
+                                <div class="dot d1"></div>
+                                <div class="dot d2"></div>
+                            </div>
+                            <p class="sec-title">Biometric sign-in</p>
+                        </article>
+                        <article class="sec-card">
+                            <div class="sec-ill">
+                                <div class="bar-row">
+                                    <span class="mbar"></span><span class="mbar"></span><span class="mbar"></span>
+                                </div>
+                                <div class="strength"></div>
+                            </div>
+                            <p class="sec-title">Password strength meter</p>
+                        </article>
+                    </div>
+                    <div class="sec-row sec-row-center">
+                        <article class="sec-card">
+                            <div class="sec-ill">
+                                <div class="bot-dot"></div>
+                            </div>
+                            <p class="sec-title">Bot and spam protection</p>
+                        </article>
+                        <article class="sec-card">
+                            <div class="sec-ill">
+                                <div class="code-mini">
+                                    <span class="cm"></span><span class="cm"></span><span class="cm"></span>
+                                </div>
+                            </div>
+                            <p class="sec-title">Two-factor authentication</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="section-block full">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="label-row">
+                        <span class="label-line"></span>
+                        <span class="label-text">Solid foundation</span>
+                        <span class="label-line"></span>
+                    </div>
+                    <h2>The one platform,<br>for years of growth.</h2>
+                    <p class="section-desc">A complete authentication platform that grows with your team, your users, and your product.</p>
+                </div>
+                <div class="diagram-wrap">
+                    <div class="diagram">
+                        <div class="diag-row top">
+                            <span class="badge">Email and password</span>
+                            <span class="badge">Social login</span>
+                            <span class="badge">Two-step verification</span>
+                        </div>
+                        <div class="diag-mid">
+                            <div class="vbar v1"></div>
+                            <div class="vbar v2"></div>
+                        </div>
+                        <div class="diag-console" aria-hidden="true">
+                            <span class="console-mark">◆</span>
+                            <span class="console-controls"></span>
+                            <span class="console-controls"></span>
+                        </div>
+                        <div class="diag-row bottom">
+                            <span class="badge">Single sign-on</span>
+                            <span class="badge">Directory sync</span>
+                        </div>
+                        <div class="glow-line"></div>
+                    </div>
+                </div>
+                <div class="center-btn">
+                    <a class="pill-link pill-wide" href="#">Read about integrations</a>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 8 Reviews -->
+        <section class="section-block" id="reviews">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner reviews-inner">
+                <div class="reviews-grid">
+                    <figure class="review-col">
+                        <div class="review-logo">LB</div>
+                        <blockquote class="quote">The form was quick to set up and gave full control over the look.</blockquote>
+                        <figcaption class="figcap">
+                            <span class="name">Alex Morgan</span>
+                            <span class="job">Product Lead</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="review-col">
+                        <div class="review-logo">LB</div>
+                        <blockquote class="quote">Easy migration that saved our engineering time.</blockquote>
+                        <figcaption class="figcap">
+                            <span class="name">Taylor Rivera</span>
+                            <span class="job">Engineering Manager</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+
+        <!-- Section 9 CTA -->
+        <section class="section-block full" id="get-started">
+            <div class="section-bg-glow"></div>
+            <div class="section-divider-top"></div>
+            <div class="section-inner">
+                <div class="section-header">
+                    <h2 class="cta-h2">Start building today</h2>
+                </div>
+                <div class="cta-cards">
+                    <article class="cta-card">
+                        <div class="dots">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <p class="cta-title">Try it online</p>
+                        <p class="cta-sub">The fastest way to start.</p>
+                    </article>
+                    <article class="cta-card">
+                        <div class="dots">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <p class="cta-title">View the code</p>
+                        <p class="cta-sub">Host the form yourself.</p>
+                    </article>
+                </div>
+                <div class="center-btn">
+                    <a class="pill-link pill-wide" href="#">Follow for updates</a>
+                </div>
+            </div>
+            <div class="section-divider-bottom"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-row">
+                <div class="footer-left">
+                    <span class="footer-logo">LoginBox</span>
+                </div>
+                <div class="footer-center">
+                    <span class="footer-year">© 2026</span>
+                </div>
+                <div class="footer-right">
+                    <a class="footer-link" href="https://github.com/">GitHub</a>
+                </div>
+            </div>
+            <p class="footer-note">A demo product page</p>
+        </div>
+    </footer>
 </body>
 </html>

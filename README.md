@@ -1,31 +1,29 @@
-- **Автор:** Синюк Антон, група ПІ-26
-- **Тема проєкту:** Сайт з наданням послуг хостингу, готових хост-панелей
-- **Адреса опублікованого сайту:** (https://kronix345.github.io/web-course/)
+# LoginBox
 
-## Перелік лабораторних робіт
+A product landing page for LoginBox - a ready-made sign-in form that developers add to their apps.
 
-- [x] Лабораторна робота № 1 — середовище розроблення, публікація документа
-- [ ] Лабораторна робота № 2 — розмітка текстового вмісту
+<!-- Add a screenshot here: ![LoginBox Screenshot](screenshot.png) -->
 
+## Technologies
 
-## Перелік використанних технологій
+- HTML5
+- CSS3
 
-- **HTML - мова розмітки та структурування вмісту**
-- **CSS - оформлення та адаптивна верстка**
-- **JavaScript - інтерактивність та взаємодія з користувачем(реалізація в процесі)**
-- **GitHub Pages**
-
-# Структура Репозиторію
+## File structure
 
 ```
 web-course/
-├── index.html                # Головна сторінка
-├── about.html                # Сторінка відомостей про автора
-├── contacts.html             # Сторінка контактів
-├── favicon.ico               # Іконка сайту
-├── .gitignore                # Файл ігнорування git
-├── README.md                 # Опис репозиторію
-└── assets/
-    └── css/
-        └── style.css         # Стилі сайту
+├── index.html
+├── css/
+│   └── style.css
+└── README.md
 ```
+
+## How to run
+
+- Open `index.html` directly in a browser
+- Or use GitHub Pages
+
+## Author
+
+Kronix345
