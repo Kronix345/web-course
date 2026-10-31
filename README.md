@@ -1,28 +1,36 @@
-# LoginBox
+# AuthKit
 
-A product landing page for LoginBox - a ready-made sign-in form that developers add to their apps.
+A static landing page concept for AuthKit, showcasing an authentication experience for modern web applications. The page highlights sign-in options, customization, security features, and integrations with Radix and WorkOS.
 
-<!-- Add a screenshot here: ![LoginBox Screenshot](screenshot.png) -->
+## What’s on the page
 
-## Technologies
+- Examples of email sign-in, social login, password entry, and multi-factor authentication
+- Authentication options including single sign-on, biometrics, and magic authentication
+- A preview of customizable branding, colors, and interface styles
+- Sections introducing Radix components, enterprise security, and WorkOS integrations
+- Customer testimonials and calls to action
+
+This is a front-end visual showcase. The sign-in controls and links are illustrative and are not connected to an authentication service or backend.
+
+## Built with
 
 - HTML5
 - CSS3
 
-## File structure
+## Project structure
 
-```
+```text
 web-course/
 ├── index.html
-├── css/
-│   └── style.css
+├── style.css
+├── img/
+│   └── ... page graphics and illustrations
 └── README.md
 ```
 
-## How to run
+## Run locally
 
-- Open `index.html` directly in a browser
-- Or use GitHub Pages
+Open `index.html` in a browser. No installation, build step, or additional dependencies are required. The page can also be hosted as a static site, for example with GitHub Pages.
 
 ## Author
 
