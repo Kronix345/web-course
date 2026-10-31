@@ -1,0 +1,572 @@
+/* Макет 1440px по центру */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background: #05060f;
+  color: #c7d3ea;
+  font: 400 14px/20px "Segoe UI", "Selawik", "Open Sans", system-ui, sans-serif;
+}
+
+.sec {
+  position: relative;
+  isolation: isolate;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.sec::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.sec:nth-of-type(1)::before {
+  background:
+    radial-gradient(ellipse 290px 125px at 50% 54%, rgba(193, 216, 255, .22), transparent 74%),
+    radial-gradient(ellipse 520px 250px at 50% 54%, rgba(80, 126, 213, .16), transparent 76%),
+    radial-gradient(ellipse 520px 100px at 50% 80%, rgba(119, 163, 232, .13), transparent 78%);
+}
+
+.sec:nth-of-type(2)::before {
+  background:
+    radial-gradient(ellipse 430px 280px at 50% 54%, rgba(93, 143, 239, .22), transparent 75%),
+    radial-gradient(ellipse 650px 330px at 50% 54%, rgba(63, 103, 181, .12), transparent 78%);
+}
+
+.sec:nth-of-type(3)::before {
+  background:
+    radial-gradient(ellipse 430px 260px at 50% 57%, rgba(160, 194, 249, .17), transparent 74%),
+    radial-gradient(ellipse 640px 360px at 50% 57%, rgba(66, 109, 184, .16), transparent 78%);
+}
+
+.sec:nth-of-type(4)::before {
+  background:
+    radial-gradient(ellipse 380px 230px at 50% 49%, rgba(116, 161, 241, .22), transparent 72%),
+    radial-gradient(ellipse 650px 340px at 50% 53%, rgba(68, 107, 180, .12), transparent 78%);
+}
+
+.sec:nth-of-type(5)::before {
+  background:
+    radial-gradient(ellipse 520px 300px at 50% 56%, rgba(132, 170, 237, .18), transparent 75%),
+    radial-gradient(ellipse 720px 390px at 50% 57%, rgba(54, 91, 157, .12), transparent 79%);
+}
+
+.sec:nth-of-type(6)::before {
+  background:
+    radial-gradient(ellipse 390px 220px at 50% 59%, rgba(111, 157, 243, .23), transparent 72%),
+    radial-gradient(ellipse 670px 350px at 50% 60%, rgba(54, 92, 164, .14), transparent 78%);
+}
+
+.sec:nth-of-type(7)::before {
+  background:
+    radial-gradient(ellipse 430px 180px at 50% 48%, rgba(146, 184, 246, .19), transparent 74%),
+    radial-gradient(ellipse 700px 300px at 50% 53%, rgba(52, 88, 157, .1), transparent 78%);
+}
+
+.sec:nth-of-type(8)::before {
+  background:
+    radial-gradient(ellipse 460px 260px at 50% 52%, rgba(155, 191, 249, .22), transparent 73%),
+    radial-gradient(ellipse 720px 380px at 50% 55%, rgba(65, 105, 181, .14), transparent 78%);
+}
+
+.hr {
+  height: 1px;
+  background: rgba(186, 214, 247, .06);
+}
+
+.a {
+  position: absolute;
+}
+
+.c {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.g {
+  background: linear-gradient(0deg, #d8ecf8, #98c0ef);
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 16px rgba(174, 207, 242, .24));
+  -webkit-background-clip: text;
+}
+
+.h {
+  font: 500 22px/51px "Inter", sans-serif;
+}
+
+.eyebrow {
+  font-size: 7px;
+  line-height: 20px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  position: absolute;
+  top: 10px;
+  width: 86px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(216, 236, 248, 0), rgba(184, 216, 254, .32));
+  content: "";
+}
+
+.eyebrow::before {
+  left: calc(50% - 43px - var(--d, 135px));
+}
+
+.eyebrow::after {
+  left: calc(50% - 43px + var(--d, 135px));
+  transform: rotate(180deg);
+}
+
+.lead {
+  position: absolute;
+  left: calc(50% - 220px);
+  width: 440px;
+  color: rgba(200, 212, 234, .78);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.muted {
+  color: rgba(199, 211, 234, .64);
+}
+
+.pill {
+  position: absolute;
+  left: 50%;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: rgba(186, 214, 247, .06);
+  box-shadow: inset 0 0 0 1px rgba(186, 215, 247, .12);
+  line-height: 36px;
+  text-decoration: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* Hero background and grid */
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1302px;
+  background:
+    radial-gradient(50% 64% at 50% 40%, rgba(21, 61, 204, .08), transparent),
+    radial-gradient(50% 68% at 50% 40%, rgba(216, 236, 248, .04), transparent);
+}
+
+.vl {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 810px;
+  background: linear-gradient(180deg, rgba(186, 215, 247, .12) 80%, transparent);
+}
+
+.hl {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(186, 215, 247, .12) 50%, transparent);
+}
+
+/* Login cards */
+.card {
+  position: absolute;
+  border: 1px solid rgba(186, 207, 247, .16);
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 50% 38%, rgba(173, 205, 255, .3), transparent 72%),
+    linear-gradient(rgba(186, 207, 247, .04), rgba(186, 207, 247, .04)),
+    rgba(5, 6, 15, .97);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, .3),
+    0 0 56px rgba(107, 151, 226, .24),
+    inset 0 1px 1px rgba(216, 236, 248, .2),
+    inset 0 24px 48px rgba(168, 216, 245, .16);
+}
+
+.ico {
+  position: absolute;
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  border: 3px double rgba(186, 214, 247, .48);
+  border-radius: 50%;
+}
+
+.t {
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.lab {
+  position: absolute;
+  left: 36px;
+  color: #fff;
+}
+
+.in {
+  position: absolute;
+  right: 36px;
+  left: 36px;
+  height: 32px;
+  padding: 6px 11px;
+  border: 1px solid rgba(186, 215, 247, .12);
+  border-radius: 3px;
+  background: rgba(199, 211, 234, .06);
+  color: #d1e4fa;
+  font: inherit;
+}
+
+.in::placeholder {
+  color: rgba(186, 214, 247, .32);
+}
+
+.btn {
+  position: absolute;
+  right: 36px;
+  left: 36px;
+  height: 32px;
+  border: 1px solid rgba(186, 215, 247, .12);
+  border-radius: 3px;
+  background: none;
+  color: #d1e4fa;
+  font: inherit;
+  line-height: 30px;
+  text-align: center;
+}
+
+.btn.p {
+  border-color: #663af3;
+  background: #663af3;
+  color: #fff;
+}
+
+.round {
+  border-radius: 999px;
+}
+
+.or {
+  position: absolute;
+  right: 36px;
+  left: 36px;
+  color: rgba(186, 214, 247, .32);
+  text-align: center;
+}
+
+.or::before,
+.or::after {
+  position: absolute;
+  top: 10px;
+  width: 110px;
+  height: 1px;
+  background: rgba(186, 215, 247, .12);
+  content: "";
+}
+
+.or::before {
+  left: 0;
+}
+
+.or::after {
+  right: 0;
+}
+
+.otp {
+  position: absolute;
+  top: 202px;
+  width: 44px;
+  height: 48px;
+  border: 1px solid rgba(186, 215, 247, .12);
+  border-radius: 2px;
+  background: rgba(199, 211, 234, .06);
+}
+
+/* Theme switch and feature icons */
+.sw {
+  position: absolute;
+  top: 1031px;
+  left: 600px;
+  width: 240px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(186, 214, 247, .06);
+  box-shadow: inset 0 0 0 1px rgba(186, 214, 247, .06);
+}
+
+.sw i {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 116px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(186, 207, 247, .04);
+  box-shadow:
+    inset 0 1px 1px rgba(216, 236, 248, .2),
+    inset 0 0 0 1px rgba(186, 207, 247, .12);
+}
+
+.mode-icon {
+  position: absolute;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  color: rgba(199, 211, 234, .72);
+}
+
+.mode-icon.moon {
+  left: 52px;
+}
+
+.mode-icon.sun {
+  left: 172px;
+  color: rgba(199, 211, 234, .46);
+}
+
+.feat img {
+  position: absolute;
+  top: 1222px;
+  width: 48px;
+  height: 48px;
+}
+
+.feat .lk {
+  top: 1234px;
+  width: 72px;
+  height: 24px;
+}
+
+.feat span {
+  position: absolute;
+  top: 1282px;
+  width: 148px;
+  color: rgba(199, 211, 234, .64);
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+/* Extensible section */
+.chip {
+  position: absolute;
+  border: 1px solid rgba(186, 215, 247, .24);
+  border-radius: 10px;
+  background: rgba(186, 214, 247, .04);
+  box-shadow: inset 0 1px 1px rgba(199, 211, 234, .12);
+}
+
+/* Brand customization */
+.browser {
+  position: absolute;
+  top: 404px;
+  right: 24px;
+  left: 24px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(6, 6, 14, .4);
+  box-shadow:
+    0 0 76px rgba(116, 159, 230, .16),
+    inset 0 1px 1px rgba(216, 236, 248, .2),
+    inset 0 24px 48px rgba(168, 216, 245, .1),
+    inset 0 0 0 1px rgba(199, 211, 234, .1);
+}
+
+.browser::before {
+  position: absolute;
+  z-index: 0;
+  top: -70px;
+  left: 15%;
+  width: 70%;
+  height: 250px;
+  background: radial-gradient(ellipse, rgba(191, 216, 255, .38), rgba(99, 145, 220, .18) 36%, transparent 72%);
+  content: "";
+  pointer-events: none;
+}
+
+.browser .bar {
+  height: 36px;
+  border-bottom: 1px solid rgba(186, 207, 247, .08);
+  background: rgba(186, 207, 247, .02);
+}
+
+.mini {
+  position: absolute;
+  padding: 12px;
+  border: 1px solid rgba(186, 215, 247, .12);
+  border-radius: 12px;
+  background: rgba(186, 214, 247, .03);
+  color: rgba(199, 211, 234, .64);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.sq {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 8px 6px 0 0;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
+}
+
+/* Security and platform */
+.security-card {
+  position: absolute;
+  width: 320px;
+  height: 242px;
+  filter: drop-shadow(0 0 18px rgba(117, 160, 232, .22));
+}
+
+.bd {
+  position: absolute;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid rgba(186, 214, 247, .06);
+  border-radius: 6px;
+  background: #05060f;
+  box-shadow:
+    inset -.5px .5px 1px rgba(199, 211, 234, .12),
+    inset 0 0 96px rgba(186, 215, 247, .08);
+  color: #d1e4fa;
+  font-size: 6px;
+  line-height: 22px;
+}
+
+.board {
+  position: absolute;
+  top: 470px;
+  left: 430px;
+  width: 588px;
+  height: 282px;
+  border: 2px solid rgba(186, 215, 247, .3);
+  border-radius: 14px;
+  background: rgba(186, 214, 247, .03);
+  box-shadow:
+    0 0 48px rgba(100, 146, 224, .2),
+    inset 0 0 0 8px rgba(5, 6, 15, .6),
+    inset 0 0 48px rgba(115, 156, 230, .1);
+}
+
+/* Testimonials and calls to action */
+.tcard {
+  position: absolute;
+  top: 0;
+  width: 498px;
+  height: 384px;
+}
+
+.tcard blockquote {
+  position: absolute;
+  top: 144px;
+  left: 40px;
+  width: 418px;
+  color: #c7d3ea;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tcard .n {
+  position: absolute;
+  top: 296px;
+  left: 100px;
+  color: #c7d3ea;
+}
+
+.tcard .r {
+  position: absolute;
+  top: 316px;
+  left: 100px;
+}
+
+.logo-t {
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  font: 600 36px/40px "Inter", sans-serif;
+  letter-spacing: -1px;
+}
+
+.cta {
+  position: absolute;
+  top: 0;
+  width: 442px;
+  height: 331px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(152, 192, 239, .24), rgba(216, 236, 248, 0)),
+    rgba(186, 207, 247, .12);
+  box-shadow:
+    inset 0 1px 1px rgba(216, 236, 248, .2),
+    inset 0 24px 48px rgba(168, 216, 245, .06);
+  text-decoration: none;
+}
+
+.cta h3 {
+  position: absolute;
+  top: 235px;
+  right: 0;
+  left: 0;
+  font: 500 14px/32px "Inter", sans-serif;
+  text-align: center;
+}
+
+.cta p {
+  position: absolute;
+  top: 275px;
+  right: 0;
+  left: 0;
+  color: rgba(200, 212, 234, .78);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.cta b {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #d1e4fa;
+}
+
+.cta b:nth-child(1) {
+  top: 26px;
+  left: 26px;
+}
+
+.cta b:nth-child(2) {
+  top: 26px;
+  right: 26px;
+}
+
+.cta b:nth-child(3) {
+  bottom: 26px;
+  left: 26px;
+}
+
+.cta b:nth-child(4) {
+  right: 26px;
+  bottom: 26px;
+}
